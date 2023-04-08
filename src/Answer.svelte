@@ -1,0 +1,103 @@
+<script>
+    export let question = "";
+    export let answer = "";
+    export let date = "";
+    export let model = "";
+    export let sources = [];
+  
+    let showSources = false;
+  
+    function toggleSources() {
+      showSources = !showSources;
+    }
+  
+    function findCitations(input) {
+        const bracketPattern = /\[(\d+(-\d+)?(?:,\d+(-\d+)?)*)\]/g;
+        const wordPattern = /\(([^\d\s()]+(?:\d{4})(?:,\s?[^\d\s()]+(?:\d{4}))*)\)/g;
+        const output = [];
+
+        let bracketMatch;
+        while ((bracketMatch = bracketPattern.exec(input)) !== null) {
+            const range = bracketMatch[1].split(',');
+            range.forEach(item => {
+            if (item.includes('-')) {
+                const [start, end] = item.split('-').map(Number);
+                for (let i = start; i <= end; i++) {
+                output.push({ start: bracketMatch.index, end: bracketPattern.lastIndex, key: i.toString() });
+                }
+            } else {
+                output.push({ start: bracketMatch.index, end: bracketPattern.lastIndex, key: item });
+            }
+            });
+        }
+
+        let wordMatch;
+        while ((wordMatch = wordPattern.exec(input)) !== null) {
+            const words = wordMatch[1].split(/,\s?/);
+            words.forEach(word => {
+            output.push({ start: wordMatch.index, end: wordPattern.lastIndex, key: word });
+            });
+        }
+
+        return output;
+    }
+
+    const citations = findCitations(answer);
+
+  const answerWithoutCitations = answer.replace(/\[.*?\]|\(.*?\)/g, '');
+  </script>
+
+<main>
+    <h1>{question}</h1>
+    <p class="answer">{answerWithoutCitations}</p>
+    <div class="details">
+      <p>Date: {date}</p>
+      <p>Model Type: {model}</p>
+    </div>
+    <div class="sources {showSources ? 'show' : ''}">
+      {#each sources as reference}
+        <p class="reference">[{reference.key}] {reference.text}</p>
+      {/each}
+    </div>
+  </main>
+
+<style>
+    main {
+        background-color: antiquewhite;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        border: 1px solid black;
+    }
+
+    .question {
+        font-size: 1.5em;
+    }
+
+    .answer {
+        text-indent: 2em;
+        margin-bottom: 20px;
+    }
+
+    .details {
+        font-size: 0.9em;
+    }
+
+    .citation {
+        text-decoration: none;
+        color: blue;
+        cursor: pointer;
+    }
+
+    .sources {
+        display: none;
+    }
+
+    .sources.show {
+        display: block;
+    }
+
+    .reference {
+        margin-bottom: 8px;
+    }
+</style>
