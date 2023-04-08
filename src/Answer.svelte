@@ -54,7 +54,7 @@
     <table>
         <tr>
             <td>model:</td>
-            <td>{model}</td>
+            <td class="model">{model}</td>
             </tr>
         <tr>
             <td>date:</td>
@@ -102,6 +102,11 @@
         font-size: 1.5em;
     }
 
+    .model {
+        font-weight: bold;
+        color: #EE3333;
+    }
+
     .answer {
         margin-bottom: 20px;
     }
@@ -113,7 +118,7 @@
 
     .citation {
         text-decoration: none;
-        color: blue;
+        color: #3322AA;
         cursor: pointer;
     }
 
