@@ -43,10 +43,10 @@ textarea {
 	padding: 0.4em;
 	margin: 0 0 0.5em 0;
 	box-sizing: border-box;
-	border: 1px solid #00ccff;
+	border: 1px solid #333;
 	border-radius: 2px;
-	background-color: rgba(0, 0, 0, 0.5);
-	color: #00ccff;
+	background-color: #f5f4e9;
+	color: #333;
 }
 
 input:disabled {
@@ -55,8 +55,8 @@ input:disabled {
 
 button {
 	color: #00ccff;
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 1px solid #00ccff;
+	background-color: rgba(227, 192, 34, 0.8);
+	border: 1px solid #000000;
 	outline: none;
 }
 
@@ -65,7 +65,7 @@ button:disabled {
 }
 
 button:not(:disabled):active {
-	background-color: #333;
+	background-color: rgba(227, 192, 34, 0.8);
 }
 
 button:focus {
