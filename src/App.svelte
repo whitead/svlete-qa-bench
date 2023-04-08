@@ -48,8 +48,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		grid-gap: 20px;
-		max-width: 1200px;
+		width: 80%;
+		margin-bottom: 2rem;
 	}
+	
 	.question {
 		font-size: 1.5em;
 		margin-left: 10px;
@@ -58,6 +60,18 @@
 	.question-container {
 		display: flex;
 		align-items: center;
+	}
+
+	@media (max-width: 900px) {
+		.question-container {
+			flex-direction: column;
+			margin-top: 1rem;
+		}
+
+		.answer-grid {
+			width: 90%;
+			grid-template-columns: unset;
+		}
 	}
 
 </style>
