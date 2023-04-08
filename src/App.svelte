@@ -9,15 +9,16 @@
 <main>
 	<h1 class="hero">qa_bench</h1>
 	<div>by andrew white</div>
-
-	<select bind:value={selectedQuestion}>
-		{#each [...questions] as question, index}
-			<option value={question}>Q{index + 1}</option>
-		{/each}
-	</select>
-	<p>
-		{selectedQuestion}
-	</p>
+	<div class="question-container">
+		<select bind:value={selectedQuestion}>
+			{#each [...questions] as question, index}
+				<option value={question}>Q{index + 1}</option>
+			{/each}
+		</select>
+		<p class="question">
+			{selectedQuestion}
+		</p>
+	</div>
 	<div class="answer-grid">
 	{#each data.filter((m) => m.question === selectedQuestion) as entry}
     <Answer
@@ -49,4 +50,14 @@
 		grid-gap: 20px;
 		max-width: 1200px;
 	}
+	.question {
+		font-size: 1.5em;
+		margin-left: 10px;
+	}
+
+	.question-container {
+		display: flex;
+		align-items: center;
+	}
+
 </style>

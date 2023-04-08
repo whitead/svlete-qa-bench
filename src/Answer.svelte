@@ -50,6 +50,18 @@
 
 <main>
     <!-- <p class="question">{question}</p> -->
+    <div class="details">
+    <table>
+        <tr>
+            <td>model:</td>
+            <td>{model}</td>
+            </tr>
+        <tr>
+            <td>date:</td>
+            <td>{date}</td>
+        </tr>
+
+    </table>
     <p class="answer">
         {#each citations as citation, i}
           {answer.slice(i === 0 ? 0 : citations[i - 1].end, citation.start)}
@@ -65,10 +77,6 @@
           {/if}
         {/each}
       </p>
-    <div class="details">
-      <p>date: {date}</p>
-      <p>model  : {model}</p>
-    </div>
     {#if showSources}
     <div  transition:fade>
       {#each sources as reference}
@@ -87,17 +95,20 @@
         border: 1px solid black;
     }
 
+    td {
+        padding-right: 5px;
+    }
     .question {
         font-size: 1.5em;
     }
 
     .answer {
-        text-indent: 2em;
         margin-bottom: 20px;
     }
 
     .details {
         font-size: 0.9em;
+        
     }
 
     .citation {
