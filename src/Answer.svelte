@@ -1,4 +1,5 @@
 <script>
+    import { fade } from 'svelte/transition';
     export let question = "";
     export let answer = "";
     export let date = "";
@@ -6,10 +7,11 @@
     export let sources = [];
   
     let showSources = false;
-  
+
     function toggleSources() {
-      showSources = !showSources;
+    showSources = !showSources;
     }
+
   
     function findCitations(input) {
         const bracketPattern = /\[(\d+(-\d+)?(?:,\d+(-\d+)?)*)\]/g;
@@ -44,21 +46,36 @@
 
     const citations = findCitations(answer);
 
-  const answerWithoutCitations = answer.replace(/\[.*?\]|\(.*?\)/g, '');
   </script>
 
 <main>
-    <h1>{question}</h1>
-    <p class="answer">{answerWithoutCitations}</p>
+    <!-- <p class="question">{question}</p> -->
+    <p class="answer">
+        {#each citations as citation, i}
+          {answer.slice(i === 0 ? 0 : citations[i - 1].end, citation.start)}
+          <sup>
+            <a
+              tabindex="0"
+              class="citation"
+              on:click={toggleSources}
+            >{answer.slice(citation.start, citation.end)}</a>
+          </sup>
+          {#if i === (citations.length - 1)}
+            {answer.slice(citation.end)}
+          {/if}
+        {/each}
+      </p>
     <div class="details">
-      <p>Date: {date}</p>
-      <p>Model Type: {model}</p>
+      <p>date: {date}</p>
+      <p>model  : {model}</p>
     </div>
-    <div class="sources {showSources ? 'show' : ''}">
+    {#if showSources}
+    <div  transition:fade>
       {#each sources as reference}
         <p class="reference">[{reference.key}] {reference.text}</p>
       {/each}
     </div>
+    {/if}
   </main>
 
 <style>
@@ -87,14 +104,6 @@
         text-decoration: none;
         color: blue;
         cursor: pointer;
-    }
-
-    .sources {
-        display: none;
-    }
-
-    .sources.show {
-        display: block;
     }
 
     .reference {
