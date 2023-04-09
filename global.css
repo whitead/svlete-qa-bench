@@ -53,13 +53,6 @@ input:disabled {
 	color: #999;
 }
 
-button {
-	color: #00ccff;
-	background-color: rgba(227, 192, 34, 0.8);
-	border: 1px solid #000000;
-	outline: none;
-}
-
 button:disabled {
 	color: #999;
 }
@@ -69,5 +62,5 @@ button:not(:disabled):active {
 }
 
 button:focus {
-	border-color: #00ff00;
+	border-color: #f96ae8;
 }
