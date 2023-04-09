@@ -1,63 +1,65 @@
 export default [
-    {
-        "question": "What do bispecific CD38 antibodies bind to and how do they treat myeloma?",
-        "model": "paperqa-1.0.0",
-        "date": "2023-04-08",
-        "answer": "There is limited information on bispecific CD38 antibodies in the provided sources. Verkleij2020 pages 4-4 and Dalla2020 pages 1-2 do not provide information on bispecific CD38 antibodies. However, Verkleij2020 pages 1-1 and Verkleij2020 pages 6-6 discuss the use of CD38-targeting antibodies, such as daratumumab or isatuximab, for the treatment of multiple myeloma. These antibodies work by binding to CD38 on the surface of myeloma cells and inducing immune-mediated cell death. \n\nWhile there is no mention of bispecific CD38 antibodies specifically, Verkleij2020 pages 6-6 discusses various bispecific antibodies that target different proteins for the treatment of multiple myeloma. For example, AMG 424 is a bispecific antibody that targets CD38 and CD3, and Bi 38-3 is a bispecific antibody that targets CD38 and CD3. These antibodies work by redirecting T-cells to attack cancer cells. \n\nTherefore, it can be inferred that bispecific CD38 antibodies bind to CD38 and another protein, such as CD3, and work by redirecting T-cells to attack myeloma cells. However, more information is needed to fully understand the mechanism of action of bispecific CD38 antibodies.",
-        "sources": [
-          {
-            "key": "Verkleij2020 pages 4-4",
-            "text": "Verkleij, Christie P.M., et al. \"T-cell redirecting bispecific antibodies targeting BCMA for the treatment of multiple myeloma.\" Oncotarget, vol. 11, no. 45, 2020, pp. 4076-4081."
-          },
-          {
-            "key": "Dalla2020 pages 1-2",
-            "text": "Dalla Palma, Benedetta, et al. \"Monoclonal and Bispeci\ufb01c Anti-BCMA Antibodies in Multiple Myeloma.\" Journal of Clinical Medicine, vol. 9, no. 9, 2020, p. 2969, doi:10.3390/jcm9092969."
-          },
-          {
-            "key": "Caraccio2020 pages 25-25",
-            "text": "Caraccio, Chiara, et al. \"Bispecific Antibodies for Multiple Myeloma: A Review of Targets, Drugs, Clinical Trials, and Future Directions.\" Frontiers in Immunology, vol. 11, 2020, p. 501., doi:10.3389/\ufb01mmu.2020.00501."
-          },
-          {
-            "key": "Verkleij2020 pages 1-1",
-            "text": "Verkleij, Christie P.M., et al. \"T-cell redirecting bispecific antibodies targeting BCMA for the treatment of multiple myeloma.\" Oncotarget, vol. 11, no. 45, 2020, pp. 4076-4081."
-          },
-          {
-            "key": "Verkleij2020 pages 6-6",
-            "text": "Verkleij, Christie P.M., et al. \"T-cell redirecting bispecific antibodies targeting BCMA for the treatment of multiple myeloma.\" Oncotarget, vol. 11, no. 45, 2020, pp. 4076-4081."
-          }
-        ]
+  {
+    "question": "What do bispecific CD38 antibodies bind to and how do they treat myeloma?",
+    "model": "paperqa-1.0.0",
+    "date": "2023-04-09",
+    "answer": "Bispecific CD38 antibodies bind to CD38, a protein expressed on the surface of multiple myeloma (MM) cells (Green2018, Cho2022 pages 14-15). These antibodies have two binding sites, one for CD38 and the other for CD3 on T cells, leading to T cell activation and subsequent killing of the myeloma cells (Cho2022 pages 14-15). In addition to blocking CD38, bispecific CD38 antibodies such as daratumumab and isatuximab also block immunosuppressive regulatory cells, including Treg, Breg, and myeloid-derived suppressor cells, leading to improved host-anti-tumor immunity (Cho2022 pages 1-2). Bispecific CD38 antibodies treat myeloma through pretargeted radioimmunotherapy (PRIT), which has demonstrated remarkable efficacy targeting tumor antigens (Green2018 pages 1-1). In murine xenograft models of MM and non-Hodgkin lymphoma (NHL), the CD38-bispecific construct demonstrated excellent blood clearance and tumor targeting, resulting in 100% complete remissions by day 12 in MM and NHL xenograft models, ultimately curing 80% of mice at optimal doses (Green2018 pages 1-1). However, the text does not provide information on the specific mechanisms of action of bispecific CD38 antibodies in newly diagnosed or relapsed/refractory patients (Verkleij2020 pages 1-1).",
+    "sources": [
+      {
+        "key": "Verkleij2020 pages 1-1",
+        "text": "Verkleij, Christie P.M., et al. \"T-cell redirecting bispecific antibodies targeting BCMA for the treatment of multiple myeloma.\" Oncotarget, vol. 11, no. 45, 2020, pp. 4076-4081."
       },
       {
-        "question": "How can carbon nanotubes be manufactured at scale?",
-        "model": "paperqa-1.0.0",
-        "date": "2023-04-08",
-        "answer": "Carbon nanotubes can be manufactured at scale using various methods and techniques, including chemical vapor deposition, arc discharge, laser ablation, and roll-to-roll continuous manufacturing (Zhang2020 pages 8-8). One specific roll-to-roll continuous manufacturing process involves depositing a conductive polymer coating layer of PEDOT:PSS onto the carbon nanotube sheets, resulting in highly conductive carbon nanotube sheets that can be used in various engineering applications such as cabling, EMI shielding, flexible electronics, or electrodes for energy storage devices (Zhang2020 pages 7-8). Another method for large-scale production of carbon nanotubes involves using millimeter-diameter spheres as growth substrates in a chemical vapor deposition process, which is more productive than the conventional process on flat wafers due to the higher available growth surface and good fluidity of the spherical substrates (Xiang2007 pages 1-2). The scalability of carbon nanotube sheets produced through roll-to-roll manufacturing makes it a promising raw material for a wide range of engineering applications (Zhang2020 pages 2-2). Additionally, certain post-treatment methods can be used to further increase conductivity, such as nitric acid treatment and mechanical densification (Zhang2020 pages 1-1). However, the article does not provide information on all methods or techniques for manufacturing carbon nanotubes at scale, and further research may be necessary to fully understand the range of options available (Zhang2020 pages 8-8, Xiang2007 pages 7-8).",
-        "sources": [
-          {
-            "key": "Zhang2020 pages 8-8",
-            "text": "Zhang, Songlin, et al. \"Roll-to-roll continuous carbon nanotube sheets with high electrical conductivity.\" Carbon, vol. 156, 2020, pp. 1-9."
-          },
-          {
-            "key": "Zhang2020 pages 1-1",
-            "text": "Zhang, Songlin, et al. \"Roll-to-roll continuous carbon nanotube sheets with high electrical conductivity.\" Carbon, vol. 156, 2020, pp. 1-9."
-          },
-          {
-            "key": "Zhang2020 pages 7-8",
-            "text": "Zhang, Songlin, et al. \"Roll-to-roll continuous carbon nanotube sheets with high electrical conductivity.\" Carbon, vol. 156, 2020, pp. 1-9."
-          },
-          {
-            "key": "Zhang2020 pages 2-2",
-            "text": "Zhang, Songlin, et al. \"Roll-to-roll continuous carbon nanotube sheets with high electrical conductivity.\" Carbon, vol. 156, 2020, pp. 1-9."
-          },
-          {
-            "key": "Xiang2007 pages 1-2",
-            "text": "Xiang, Rong, et al. \"Large Area Growth of Aligned CNT Arrays on Spheres: Towards the Large Scale and Continuous Production.\" Chemical Vapor Deposition, vol. 13, no. 7-8, 2007, pp. 373-377. Wiley Online Library, doi: 10.1002/cvde.200606589."
-          },
-          {
-            "key": "Xiang2007 pages 7-8",
-            "text": "Xiang, Rong, et al. \"Large Area Growth of Aligned CNT Arrays on Spheres: Towards the Large Scale and Continuous Production.\" Chemical Vapor Deposition, vol. 13, no. 7-8, 2007, pp. 373-377. Wiley Online Library, doi: 10.1002/cvde.200606589."
-          }
-        ]
+        "key": "Cho2022 pages 14-15",
+        "text": "Cho, Shih-Feng, et al. \"Bispecific antibodies in multiple myeloma treatment: A journey in progress.\" Frontiers in Oncology, vol. 12, 2022, pp. 1-14. DOI: 10.3389/fonc.2022.855946."
+      },
+      {
+        "key": "Donk2018 pages 1-1",
+        "text": "vandeDonk, N.W.C.J., and Saad Z. Usmani. \"CD38 Antibodies in Multiple Myeloma: Mechanisms of Action and Modes of Resistance.\" Frontiers in Immunology, vol. 9, 2018, article 2134, doi:10.3389/\ufb01mmu.2018.02134."
+      },
+      {
+        "key": "Green2018 pages 1-1",
+        "text": "Green, Damian J., et al. \"CD38-bispecific antibody pretargeted radioimmunotherapy for multiple myeloma and other B-cell malignancies.\" Blood, vol. 131, no. 6, 2018, pp. 611-620."
+      },
+      {
+        "key": "Cho2022 pages 1-2",
+        "text": "Cho, Shih-Feng, et al. \"Bispecific antibodies in multiple myeloma treatment: A journey in progress.\" Frontiers in Oncology, vol. 12, 2022, pp. 1-14. DOI: 10.3389/fonc.2022.855946."
+      }
+    ]
+  },
+  {
+    "question": "How can carbon nanotubes be manufactured at scale?",
+    "model": "paperqa-1.0.0",
+    "date": "2023-04-09",
+    "answer": "Carbon nanotubes can be manufactured at scale using various methods, including electric arc discharge, chemical vapor deposition, and laser ablation pyrolysis (Saravanan2010). The electric-arc technique can generate large quantities of single-walled carbon nanotubes (SWNTs) with similar characteristics to those obtained by laser ablation (Journet1997). In the electric arc-discharge apparatus, the arc is generated between two electrodes in a reactor under a helium atmosphere, and a mixture of a metallic catalyst and graphite powder is used (Journet1997). The growth mechanism for SWNTs must be independent of the details of the technique used to make them (Journet1997). The CoMoCAT method, a catalytic method, has been used to synthesize single-wall carbon nanotubes (SWCNTs) at a small-scale production rate of approximately 100 grams per day (Gavankar2015). The decrease in energy requirement for carbon nanotube synthesis is observed with increased level of manufacturing readiness for high-pressure carbon monoxide conversion, chemical vapor deposition, and arc discharge manufacturing (Gavankar2015). Other methods for large-scale production of carbon nanotubes include CO2-assisted growth, fluidized bed catalytic chemical vapor deposition, and the use of natural materials as catalysts (The2012). However, challenges in growing large quantities of pure, defect-free nanotubes have limited their widespread use (De6119). While there are several methods for mass production of ceramic matrix composites (CMCs) reinforced with carbon nanotubes (CNTs), including casting methods such as slip casting, tape casting, and gel casting, the text does not directly answer the question of what the methods are for mass production of CNTs (Meshalkin2020).",
+    "sources": [
+      {
+        "key": "Journet1997 pages 1-1",
+        "text": "Journet, C., Maser, W. K., Bernier, P., Loiseau, A., Lamy de la Chapelle, M., Lefrant, S., Deniard, P., Lee, R., & Fischer, J. E. (1997). Large-scale production of single-walled carbon nanotubes by the electric-arc technique. Nature, 388(6644), 756-758. doi: 10.1038/41972"
+      },
+      {
+        "key": "De6119 pages 5-6",
+        "text": "De Volder, Michael F. L., et al. \"Carbon Nanotubes: Present and Future Commercial Applications.\" Science, vol. 339, no. 6119, 2013, pp. 535-539."
+      },
+      {
+        "key": "Gavankar2015 pages 4-5",
+        "text": "Gavankar, Sheetal, Sangwon Suh, and Arturo A. Keller. \"The Role of Scale and Technology Maturity in Life Cycle Assessment of Emerging Technologies: A Case Study on Carbon Nanotubes.\" Journal of Industrial Ecology, vol. 19, no. 1, 2015, pp. 102-114. DOI: 10.1111/jiec.12175."
+      },
+      {
+        "key": "The2012 pages 10-10",
+        "text": "The citation for the article mentioned in the text would be: \n\nHuang, JiaQi, et al. \"A review of the large-scale production of carbon nanotubes: The practice of nanoscale process engineering.\" Chinese Science Bulletin, vol. 57, no. 2-3, 2012, pp. 157-166, doi: 10.1007/s11434-011-4879-z."
+      },
+      {
+        "key": "Saravanan2010 pages 1-1",
+        "text": "Saravanan, M.S. Senthil, et al. \"Techno-economics of carbon nanotubes produced by open air arc discharge method.\" International Journal of Engineering, Science and Technology, vol. 2, no. 5, 2010, pp. 100-108."
+      },
+      {
+        "key": "Joselevich2008 pages 2-2",
+        "text": "Joselevich, Ernesto, et al. \"Carbon Nanotube Synthesis and Organization.\" Carbon Nanotubes, edited by A. Jorio et al., vol. 111, Springer-Verlag Berlin Heidelberg, 2008, pp. 101-164."
+      },
+      {
+        "key": "Meshalkin2020 pages 21-22",
+        "text": "Meshalkin, Valerii P., and Alexey V. Belyakov. \"Methods Used for the Compaction and Molding of Ceramic Matrix Composites Reinforced with Carbon Nanotubes.\" Materials 13.17 (2020): 3831."
       },
       {
         "question": "How can carbon nanotubes be manufactured at scale?",
