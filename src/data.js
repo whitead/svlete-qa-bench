@@ -60,54 +60,56 @@ export default [
       {
         "key": "Meshalkin2020 pages 21-22",
         "text": "Meshalkin, Valerii P., and Alexey V. Belyakov. \"Methods Used for the Compaction and Molding of Ceramic Matrix Composites Reinforced with Carbon Nanotubes.\" Materials 13.17 (2020): 3831."
-      },
-      {
-        "question": "How can carbon nanotubes be manufactured at scale?",
-        "model": "perplexity.ai",
-        "date": "2023-04-07",
-        "answer": "Carbon nanotubes can be manufactured at scale using various methods. One method is chemical vapor deposition (CVD), which utilizes high energy to atomize gaseous carbon sources such as methane, carbon monoxide, and acetylene[1]. Another method is laser ablation, which uses a high-power laser to vaporize a graphite source loaded with a metal catalyst[2]. Researchers at Western Michigan University\n have also developed a method for forming carbon nanotubes in a \nhigh-density, closely packed configuration, enabling their large-scale \nproduction[3]. Recently, MIT\n researchers have demonstrated that carbon nanotube transistors can be \nmade swiftly in commercial facilities, with the same equipment used to \nmanufacture silicon-based transistors[4].",
-        "sources": [
-          {
-            "key": "1",
-            "text": "https://www.britannica.com/science/carbon-nanotube"
-          },
-          {
-            "key": "2",
-            "text": "https://www.azonano.com/article.aspx?ArticleID=1108"
-          },
-          {
-            "key": "3",
-            "text": "https://wmich.edu/research/large-scale"
-          },
-          {
-            "key": "4",
-            "text": "https://news.mit.edu/2020/carbon-nanotube-transistors-factory-0601"
-          }
-        ]
-      },
-      {
-        "question": "What do bispecific CD38 antibodies bind to and how do they treat myeloma?",
-        "model": "perplexity.ai",
-        "date": "2023-04-07",
-        "answer": "Bispecific CD38\n antibodies are designed to bind to both CD38, a protein found on the \nsurface of multiple myeloma (MM) cells, and CD3, a protein found on T \ncells[1][2]. By binding to both CD38 and CD3, bispecific CD38 antibodies activate T cells to attack and kill MM cells[1][3]. This mechanism of action is similar to that of other anti-CD38 monoclonal antibodies, such as daratumumab and isatuximab[4].\n Bispecific CD38 antibodies are a novel immunotherapeutic modality that \nhas shown impressive preliminary efficacy in heavily treated MM patients[1]. They are expected to become an integral part of the MM treatment paradigm in the near future[1].",
-        "sources": [
-          {
-            "key": "1",
-            "text": "https://aacrjournals.org/bloodcancerdiscov/article/2/5/423/665839/Bispecific-Antibodies-in-Multiple-Myeloma-Present"
-          },
-          {
-            "key": "2",
-            "text": "https://www.news-medical.net/whitepaper/20210817/Targeting-CD38CD3-in-the-immunotherapy-of-multiple-myeloma.aspx"
-          },
-          {
-            "key": "3",
-            "text": "https://www.tandfonline.com/doi/full/10.1080/13543784.2020.1814253"
-          },
-          {
-            "key": "4",
-            "text": "https://ashpublications.org/blood/article/138/Supplement%201/1580/480536/The-Role-of-CD38-in-Multiple-Myeloma-Cell-Biology"
-          }
-        ]
       }
+    ]
+  },
+  {
+    "question": "How can carbon nanotubes be manufactured at scale?",
+    "model": "perplexity.ai",
+    "date": "2023-04-07",
+    "answer": "Carbon nanotubes can be manufactured at scale using various methods. One method is chemical vapor deposition (CVD), which utilizes high energy to atomize gaseous carbon sources such as methane, carbon monoxide, and acetylene[1]. Another method is laser ablation, which uses a high-power laser to vaporize a graphite source loaded with a metal catalyst[2]. Researchers at Western Michigan University\n have also developed a method for forming carbon nanotubes in a \nhigh-density, closely packed configuration, enabling their large-scale \nproduction[3]. Recently, MIT\n researchers have demonstrated that carbon nanotube transistors can be \nmade swiftly in commercial facilities, with the same equipment used to \nmanufacture silicon-based transistors[4].",
+    "sources": [
+      {
+        "key": "1",
+        "text": "https://www.britannica.com/science/carbon-nanotube"
+      },
+      {
+        "key": "2",
+        "text": "https://www.azonano.com/article.aspx?ArticleID=1108"
+      },
+      {
+        "key": "3",
+        "text": "https://wmich.edu/research/large-scale"
+      },
+      {
+        "key": "4",
+        "text": "https://news.mit.edu/2020/carbon-nanotube-transistors-factory-0601"
+      }
+    ]
+  },
+  {
+    "question": "What do bispecific CD38 antibodies bind to and how do they treat myeloma?",
+    "model": "perplexity.ai",
+    "date": "2023-04-07",
+    "answer": "Bispecific CD38\n antibodies are designed to bind to both CD38, a protein found on the \nsurface of multiple myeloma (MM) cells, and CD3, a protein found on T \ncells[1][2]. By binding to both CD38 and CD3, bispecific CD38 antibodies activate T cells to attack and kill MM cells[1][3]. This mechanism of action is similar to that of other anti-CD38 monoclonal antibodies, such as daratumumab and isatuximab[4].\n Bispecific CD38 antibodies are a novel immunotherapeutic modality that \nhas shown impressive preliminary efficacy in heavily treated MM patients[1]. They are expected to become an integral part of the MM treatment paradigm in the near future[1].",
+    "sources": [
+      {
+        "key": "1",
+        "text": "https://aacrjournals.org/bloodcancerdiscov/article/2/5/423/665839/Bispecific-Antibodies-in-Multiple-Myeloma-Present"
+      },
+      {
+        "key": "2",
+        "text": "https://www.news-medical.net/whitepaper/20210817/Targeting-CD38CD3-in-the-immunotherapy-of-multiple-myeloma.aspx"
+      },
+      {
+        "key": "3",
+        "text": "https://www.tandfonline.com/doi/full/10.1080/13543784.2020.1814253"
+      },
+      {
+        "key": "4",
+        "text": "https://ashpublications.org/blood/article/138/Supplement%201/1580/480536/The-Role-of-CD38-in-Multiple-Myeloma-Cell-Biology"
+      }
+    ]
+  }
 
 ];
