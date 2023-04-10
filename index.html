@@ -9,25 +9,13 @@
 
 	<link rel='icon' type='image/png' href='favicon.png'>
 	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<script defer src='/build/bundle.js'></script>
 </head>
 
 <body>
-	<script>
-		(async () => {
-			const response = await fetch('/build/version.txt');
-			const version = await response.text();
 
-			const link = document.createElement('link');
-			link.rel = 'stylesheet';
-			link.href = `/build/bundle.css?version=${version}`;
-			document.head.appendChild(link);
-
-			const script = document.createElement('script');
-			script.src = `/build/bundle.js?version=${version}`;
-			script.defer = true;
-			document.body.appendChild(script);
-		})();
-	</script>
 </body>
 
 </html>
