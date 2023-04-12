@@ -1,36 +1,42 @@
 <script>
-	import Answer from "./Answer.svelte";
+	import AnswerGroup from "./AnswerGroup.svelte";
 	import data from "./data.js";
-
+	// first strip https off model names
+	data.forEach((d) => {
+		d.model = d.model.replace("https://", "");
+	})
 	let questions = new Set(data.map((m) => m.question));
+	let models = new Set(data.map((m) => m.model.split("-")[0]));
 	let selectedQuestion = questions.values().next().value;
+	let groupedAnswers = Object()
+	questions.forEach((q) => models.forEach((m) => {
+		if (groupedAnswers[q] === undefined)
+			groupedAnswers[q] = []
+		const a = data.flatMap((e) => {
+			if(e.question === q && e.model.split("-")[0] === m)
+				return e
+		}).filter((e) => e !== undefined)
+		if (a.length > 0)
+			groupedAnswers[q].push(a);
+	}))
 </script>
-
 <main>
 	<h1 class="hero">qa_bench</h1>
 	<div>by andrew white</div>
 	<div class="question-container">
-		<select bind:value={selectedQuestion}>
-			{#each [...questions] as question, index}
-				<option value={question}>Q{index + 1}</option>
-			{/each}
-		</select>
-		<p class="question">
-			{selectedQuestion}
-		</p>
+	  <select bind:value={selectedQuestion}>
+		{#each [...questions] as question, index}
+		  <option value={question}>Q{index + 1}</option>
+		{/each}
+	  </select>
+	  <p class="question">{selectedQuestion}</p>
 	</div>
 	<div class="answer-grid">
-	{#each data.filter((m) => m.question === selectedQuestion) as entry}
-    <Answer
-      question={entry.question}
-      model={entry.model}
-      date={entry.date}
-      answer={entry.answer}
-      sources={entry.sources}
-    />
-  {/each}
-  </div>
-</main>
+	  {#each groupedAnswers[selectedQuestion].filter((g) => g.length > 0) as group}
+		<AnswerGroup group={group} />
+	  {/each}
+	</div>
+  </main>
 
 <style>
 	main {
@@ -45,12 +51,13 @@
 	}
 
 	.answer-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		display: flex;
+		align-items: flex-start;
 		grid-gap: 20px;
 		width: 80%;
 		margin-bottom: 2rem;
 	}
+	
 	
 	.question {
 		font-size: 1.5em;
@@ -70,7 +77,7 @@
 
 		.answer-grid {
 			width: 90%;
-			grid-template-columns: unset;
+			display: grid;
 		}
 	}
 

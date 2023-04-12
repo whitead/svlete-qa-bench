@@ -53,7 +53,7 @@
         background-color: antiquewhite;
         padding: 20px;
         max-width: 800px;
-        margin: auto;
+        flex-basis: fit-content;
         border: 1px solid black;
     }
 
