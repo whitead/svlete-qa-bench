@@ -44,8 +44,8 @@ def paper_qa(questions):
         session_id = str(uuid.uuid4())
         docs = paperqa.Docs(name=session_id)
         answer = paperqa.run_agent(docs, q)
-        sources = [{"key": c[0], "text": c[1]} for c in answer.contexts]
-        output.append({
+        sources = [{"key": c.key, "text": c.citation} for c in answer.contexts]
+        yield dict({
             "question": q,
             "model": model,
             "date": date,
@@ -60,8 +60,9 @@ def main():
     json.dump(sheets_output, open('other.json', 'w'), indent=2)
     # unique questions
     questions = list(set([q['question'] for q in sheets_output]))
-    paperqa_output = paper_qa(questions)
-    json.dump(paperqa_output, open('paperqa.json', 'w'), indent=2)
+    with open('paperqa.json', 'w') as f:
+        for p in paper_qa(questions):
+            json.dump(p, f, indent=2)
 
 
 if __name__ == '__main__':
