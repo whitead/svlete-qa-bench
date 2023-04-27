@@ -3,7 +3,7 @@
     export let group = [];
   
     $: modelDatePairs = group.map((m) => `${m.model} (${m.date})`);
-    $: startPair = modelDatePairs[0];
+    $: startPair = modelDatePairs[modelDatePairs.length - 1]
     $: selectedModel = startPair.split(" (")[0];
     $: selectedDate = startPair.split(" ")[1].slice(1, -1);
     function handler(event) {

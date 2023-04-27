@@ -1002,5 +1002,33 @@ export default [
     "date": "2023-04-26",
     "answer": "I cannot answer",
     "sources": []
+  },
+  {
+    "question": "How can I cluster protein structures output from a molecular dynamics trajectory?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-27",
+    "answer": "There are several clustering techniques available for analyzing protein structures output from a molecular dynamics trajectory. One approach is to use principal component (PC) analysis and subsequent clustering techniques, such as K-means and average-linkage algorithms, to group similar structures into subgroups based on their conformational changes (Antje2012 pages 1-1, Antje2012 pages 3-3). Another approach is to use CAVER 3.0, which implements new algorithms for both the calculation and clustering of pathways. The algorithm consists of three separable steps: identification of pathways in each provided structure, clustering of pathways identified in all snapshots, and calculation and generation of output data. The implemented hierarchical average-link clustering algorithm ensures robust clustering results and enables an easy adjustment of the clustering parameters (Chovancov2012 pages 2-2). Additionally, machine learning techniques, such as k-nearest neighbor classifiers, can be used to classify large datasets of protein structures based on their identified pathway clusters (Chovancov2012 pages 4-5). However, the appropriate clustering algorithm and interpretation of results can be complex and require careful consideration (Antje2012 pages 1-1).",
+    "sources": [
+      {
+        "key": "Chovancov2012 pages 2-2",
+        "text": "E. Chovancov\u00e1, A. Pavelka, P. Benes, Ondrej Strnad, J. Brezovsky, B. Kozl\u00edkov\u00e1, Artur G\u00f3ra, Vil\u00e9m Sustr, M. Klva\u0148a, Petr Medek, L. Biedermannov\u00e1, Jir\u00ed Sochor, and J. Damborsk\u00fd. Caver 3.0: a tool for the analysis of transport pathways in dynamic protein structures. PLoS Computational Biology, 2012."
+      },
+      {
+        "key": "Antje2012 pages 1-1",
+        "text": "Antje Wolf and K. Kirschner. Principal component and clustering analysis on molecular dynamics data of the ribosomal l11\u00b723s subdomain. Journal of Molecular Modeling, 19:539 - 549, 2012."
+      },
+      {
+        "key": "Chovancov2012 pages 4-5",
+        "text": "E. Chovancov\u00e1, A. Pavelka, P. Benes, Ondrej Strnad, J. Brezovsky, B. Kozl\u00edkov\u00e1, Artur G\u00f3ra, Vil\u00e9m Sustr, M. Klva\u0148a, Petr Medek, L. Biedermannov\u00e1, Jir\u00ed Sochor, and J. Damborsk\u00fd. Caver 3.0: a tool for the analysis of transport pathways in dynamic protein structures. PLoS Computational Biology, 2012."
+      },
+      {
+        "key": "Antje2012 pages 3-3",
+        "text": "Antje Wolf and K. Kirschner. Principal component and clustering analysis on molecular dynamics data of the ribosomal l11\u00b723s subdomain. Journal of Molecular Modeling, 19:539 - 549, 2012."
+      },
+      {
+        "key": "Roe3084 pages 12-12",
+        "text": "D. Roe and T. Cheatham. Ptraj and cpptraj: software for processing and analysis of molecular dynamics trajectory data. Journal of chemical theory and computation, 9 7:3084-95, 2013."
+      }
+    ]
   }
 ];
