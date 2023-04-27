@@ -754,5 +754,253 @@ export default [
         "text": "D. Pearce, A. M. Miller, G. Rowlands, and M. S. Turner. Role of projection in the control of bird flocks. Proceedings of the National Academy of Sciences, 111:10422 - 10426, 2014."
       }
     ]
+  },
+  {
+    "question": "What methods can be used to explain predictions from black box models in chemistry?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "The paper by Geemi et al. (2021) discusses several model-agnostic approaches for explaining predictions from black box models in chemistry, including identifying which features contribute the most, identifying which training data contributes the most, fitting a locally interpretable model around the prediction, and providing contrastive or counterfactual points. The paper also mentions feature importance analysis and local interpretable model-agnostic explanations (LIME), which provide per-feature weights that identify how each feature contributed to the final prediction. Geemi et al. (2021) also introduce a model-agnostic visualization tool named CIME for XAI based on feature attribution, which uses SHAP values and Class Attribution Maps (CAM) to compute feature/atomic attributions. Additionally, the paper discusses a model-agnostic method called MMACE for generating counterfactual explanations for molecules. However, the paper does not mention any other methods for explaining predictions from black box models in chemistry. Philip (2016) also discusses the top-ranked features for auditing black-box models on various datasets, including the Dark Reactions data in chemistry. The top-ranked features for the three models include the minimum Pauling electronegativity and the maximum Pearson electronegativity in the top-ranked cluster of features. The SVM and FNN top features include atomic properties of the inorganics that are related to the electronegativity of an element, so these proxies are correctly also highly ranked. The top-ranked decision tree features additionally include the average molecular polarizability for the organic components, which was previously hypothesized.",
+    "sources": [
+      {
+        "key": "Geemi3697 pages 1-2",
+        "text": "Geemi P Wellawatte, Aditi Seshadri, and A. White. Model agnostic generation of counterfactual explanations for molecules. Chemical Science, 13:3697 - 3705, 2021."
+      },
+      {
+        "key": "Geemi3697 pages 4-5",
+        "text": "Geemi P Wellawatte, Aditi Seshadri, and A. White. Model agnostic generation of counterfactual explanations for molecules. Chemical Science, 13:3697 - 3705, 2021."
+      },
+      {
+        "key": "Geemi3697 pages 8-9",
+        "text": "Geemi P Wellawatte, Aditi Seshadri, and A. White. Model agnostic generation of counterfactual explanations for molecules. Chemical Science, 13:3697 - 3705, 2021."
+      },
+      {
+        "key": "Philip2016 pages 5-6",
+        "text": "Philip Adler, Casey Falk, Sorelle A. Friedler, Tionney Nix, Gabriel Rybeck, C. Scheidegger, Brandon Smith, and Suresh Venkatasubramanian. Auditing black-box models for indirect influence. Knowledge and Information Systems, 54:95-122, 2016."
+      }
+    ]
+  },{
+    "question": "Why do birds flock?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "The provided sources do not directly state the reasons why birds flock. However, they do provide insights into the collective behavior of bird flocks. Nagy et al. (2010) found that there is a well-defined hierarchy among flock members based on their leading roles in pairwise interactions, and that the average spatial position of a pigeon within the flock strongly correlates with its place in the hierarchy. Cavagna et al. (2010) provided experimental evidence that bird flocks exhibit scale-free correlations, which means that the group cannot be divided into independent sub-parts, and the effective perception range of each individual is as large as the entire group. Attanasi et al. (2014) suggested that the adaptive drive for the high degree of order observed in many living groups may be to achieve a fast and robust collective decision. Ballerini et al. (2008) argued that topological interaction, rather than metric interaction, is the only mechanism that can grant robust cohesion and higher biological fitness. Bialek et al. (2012) found that interactions among neighboring birds in a flock cause an alignment of their flight directions, and the entire flock spontaneously chooses a unique direction in which to fly.",
+    "sources": [
+      {
+        "key": "Nagy2010 pages 1-1",
+        "text": "M. Nagy, Zsuzsa \u00c1kos, D. Biro, and T. Vicsek. Hierarchical group dynamics in pigeon flocks. Nature, 464:890-893, 2010."
+      },
+      {
+        "key": "Cavagna1186 pages 3-4",
+        "text": "A. Cavagna, A. Cimarelli, I. Giardina, G. Parisi, Raffaele Santagati, F. Stefanini, and M. Viale. Scale-free correlations in starling flocks. Proceedings of the National Academy of Sciences, 107:11865 - 11870, 2009."
+      },
+      {
+        "key": "Attanasi2014 pages 7-8",
+        "text": "A. Attanasi, A. Cavagna, L. Del Castello, I. Giardina, T. Grigera, A. Jelic, S. Melillo, L. Parisi, O. Pohl, E. Shen, and M. Viale. Information transfer and behavioural inertia in starling flocks. Nature physics, 10:615 - 698, 2014."
+      },
+      {
+        "key": "Ballerini1232 pages 6-7",
+        "text": "M. Ballerini, N. Cabibbo, R. Candelier, A. Cavagna, E. Cisbani, I. Giardina, V. Lecomte, A. Orlandi, G. Parisi, A. Procaccini, M. Viale, and V. Zdravkovic. Interaction ruling animal collective behavior depends on topological rather than metric distance: evidence from a field study. Proceedings of the National Academy of Sciences, 105:1232 - 1237, 2007."
+      },
+      {
+        "key": "Bialek4786 pages 1-1",
+        "text": "W. Bialek, A. Cavagna, I. Giardina, T. Mora, Edmondo Silvestri, M. Viale, and A. Walczak. Statistical mechanics for natural flocks of birds. Proceedings of the National Academy of Sciences, 109:4786 - 4791, 2011."
+      }
+    ]
+  },{
+    "question": "What are promising targets for Alzheimer's disease (other than ABeta)",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "There are several potential targets for Alzheimer's disease treatment beyond ABeta. Abyadeh1964 suggests that CRMP2 hyperphosphorylation, the Wnt/beta-catenin pathway, and PPAR alpha and gamma agonists are potential targets. Pioglitazone, a PPAR gamma agonist, has shown promise in clinical trials. Hampel5481 discusses various enzymes and proteins that have potential as therapeutic targets, including the secretases, gamma-secretase heterogeneity in the Aph1 subunit, Presenilin-1, ADAM10, and the secreted amyloid precursor protein ectodomain APPs alpha. Bronzuoli2016 suggests reducing neuroinflammation and inhibiting reactive gliosis as potential targets, with specific examples of potential treatments including minocycline, sirtuin modulators, B2 receptor blockers, glaucocalyxin B, palmitoylethanolamide, and S100B inhibitors. However, there is no consensus on which targets are most promising for Alzheimer's disease treatment. (Abyadeh1964 pages 13-13, Abyadeh1964 pages 2-3, Hampel5481 pages 17-17, Bronzuoli2016 pages 9-10)",
+    "sources": [
+      {
+        "key": "Jens2013 pages 1-1",
+        "text": "Jens Moreth, Chrystelle Mavoungou, and K. Schindowski. Passive anti-amyloid immunotherapy in alzheimer's disease: what are the most promising targets? Immunity & Ageing : I & A, 10:18 - 18, 2013."
+      },
+      {
+        "key": "Abyadeh1964 pages 13-13",
+        "text": "M. Abyadeh, Vivek Gupta, Veer Bala Gupta, Nitin Chitranshi, Yunqi Wu, A. Amirkhani, A. Meyfour, Samran Sheriff, Ting Shen, Kunal Dhiman, G. Salekdeh, P. Haynes, S. Graham, and M. Mirzaei. Comparative analysis of aducanumab, zagotenemab and pioglitazone as targeted treatment strategies for alzheimer\u2019s disease. Aging and Disease, 12:1964 - 1976, 2021."
+      },
+      {
+        "key": "Abyadeh1964 pages 2-3",
+        "text": "M. Abyadeh, Vivek Gupta, Veer Bala Gupta, Nitin Chitranshi, Yunqi Wu, A. Amirkhani, A. Meyfour, Samran Sheriff, Ting Shen, Kunal Dhiman, G. Salekdeh, P. Haynes, S. Graham, and M. Mirzaei. Comparative analysis of aducanumab, zagotenemab and pioglitazone as targeted treatment strategies for alzheimer\u2019s disease. Aging and Disease, 12:1964 - 1976, 2021."
+      },
+      {
+        "key": "Hampel5481 pages 17-17",
+        "text": "H. Hampel, J. Hardy, Kaj Blennow, Christopher Chen, George Perry, S. H. Kim, V. Villemagne, P. Aisen, M. Vendruscolo, T. Iwatsubo, C. Masters, M. Cho, L. Lannfelt, J. L. Cummings, and A. Vergallo. The amyloid-\u03b2 pathway in alzheimer\u2019s disease. Molecular Psychiatry, 26:5481 - 5503, 2021."
+      },
+      {
+        "key": "Bronzuoli2016 pages 9-10",
+        "text": "M. R. Bronzuoli, A. Iacomino, L. Steardo, and C. Scuderi. Targeting neuroinflammation in alzheimer\u2019s disease. Journal of Inflammation Research, 9:199 - 208, 2016."
+      }
+    ]
+  },{
+    "question": "Are SELFIEs or SMILES a better representation of molecules for deep learning?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "The choice between SELFIEs and SMILES as a representation of molecules for deep learning depends on the specific application and available resources (Akshat7079 pages 12-12). While SELFIEs are more expressive and can represent a larger chemical space than SMILES (Akshat7079 pages 12-12), they are also more computationally expensive and require more memory (Akshat7079 pages 12-12). SELFIEs allow for efficient algorithms to perform exploration and interpolation in the chemical space without the need for extensive training times, large datasets, and hand-crafted rules for obtaining novel molecules (Akshat7079 pages 1-2). However, the text does not provide a direct comparison of the advantages and disadvantages of using SELFIEs and SMILES representations for deep learning in molecular modeling (Akshat7079 pages 4-4, 8-9). Therefore, it is difficult to determine which representation is better for deep learning without further research.",
+    "sources": [
+      {
+        "key": "Akshat7079 pages 5-6",
+        "text": "AkshatKumar Nigam, R. Pollice, M. Krenn, Gabriel dos Passos Gomes, and Al\u00e1n Aspuru-Guzik. Beyond generative models: superfast traversal, optimization, novelty, exploration and discovery (stoned) algorithm for molecules using selfies\u2020. Chemical Science, 12:7079 - 7090, 2020."
+      },
+      {
+        "key": "Akshat7079 pages 1-2",
+        "text": "AkshatKumar Nigam, R. Pollice, M. Krenn, Gabriel dos Passos Gomes, and Al\u00e1n Aspuru-Guzik. Beyond generative models: superfast traversal, optimization, novelty, exploration and discovery (stoned) algorithm for molecules using selfies\u2020. Chemical Science, 12:7079 - 7090, 2020."
+      },
+      {
+        "key": "Akshat7079 pages 12-12",
+        "text": "AkshatKumar Nigam, R. Pollice, M. Krenn, Gabriel dos Passos Gomes, and Al\u00e1n Aspuru-Guzik. Beyond generative models: superfast traversal, optimization, novelty, exploration and discovery (stoned) algorithm for molecules using selfies\u2020. Chemical Science, 12:7079 - 7090, 2020."
+      },
+      {
+        "key": "Akshat7079 pages 4-4",
+        "text": "AkshatKumar Nigam, R. Pollice, M. Krenn, Gabriel dos Passos Gomes, and Al\u00e1n Aspuru-Guzik. Beyond generative models: superfast traversal, optimization, novelty, exploration and discovery (stoned) algorithm for molecules using selfies\u2020. Chemical Science, 12:7079 - 7090, 2020."
+      },
+      {
+        "key": "Akshat7079 pages 8-9",
+        "text": "AkshatKumar Nigam, R. Pollice, M. Krenn, Gabriel dos Passos Gomes, and Al\u00e1n Aspuru-Guzik. Beyond generative models: superfast traversal, optimization, novelty, exploration and discovery (stoned) algorithm for molecules using selfies\u2020. Chemical Science, 12:7079 - 7090, 2020."
+      }
+    ]
+  },
+  {
+    "question": "How do Salamanders breathe?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "Salamanders have evolved diverse respiratory systems for acquiring oxygen from the environment, including skin, gills, and lungs that may coexist within the same species (Hsia2013 pages 1-1). Cutaneous gas exchange is enhanced by erythrocyte fragmentation in salamanders that possess large erythrocytes (Hsia2013 pages 35-36). The text does not provide specific information about whether salamanders use their skin, lungs, or other structures for breathing (Hsia2013 pages 34-35). However, in lung-breathing tetrapods, the respiratory apparatus consists of a gas-exchanger intimately connected to a passive pump, an active pump containing the respiratory musculature, and a central nervous control element that coordinates pump activity and optimizes the function of the gas exchanger. The gas exchanger communicates with the CNCE mainly via circulation, using blood pH and O2 saturation to regulate the frequency and amplitude of active ventilation. The structure of amniote gas-exchange tissue is superficially similar to that in lungfish or lissamphibians (Hsia2013 pages 35-36).",
+    "sources": [
+      {
+        "key": "Hsia2013 pages 35-36",
+        "text": "C. Hsia, A. Schmitz, M. Lambertz, S. Perry, and J. Maina. Evolution of air breathing: oxygen homeostasis and the transitions from water to land and sky. Comprehensive Physiology, 3 2:849-915, 2013."
+      },
+      {
+        "key": "Hsia2013 pages 1-1",
+        "text": "C. Hsia, A. Schmitz, M. Lambertz, S. Perry, and J. Maina. Evolution of air breathing: oxygen homeostasis and the transitions from water to land and sky. Comprehensive Physiology, 3 2:849-915, 2013."
+      },
+      {
+        "key": "Hsia2013 pages 34-35",
+        "text": "C. Hsia, A. Schmitz, M. Lambertz, S. Perry, and J. Maina. Evolution of air breathing: oxygen homeostasis and the transitions from water to land and sky. Comprehensive Physiology, 3 2:849-915, 2013."
+      }
+    ]
+  },
+  {
+    "question": "What do bispecific CD38 antibodies bind to and how do they treat myeloma?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "Bispecific CD38 antibodies bind to CD38, a transmembrane glycoprotein expressed on the surface of multiple myeloma (MM) cells, and CD3, a T cell receptor. This binding leads to the activation of T cells and the subsequent killing of MM cells (Chiara2020 pages 14-14). Bispecific CD38 antibodies, such as GBR1342, engage T cells to kill myeloma cells (Chiara2020 pages 23-23). Bispecific CAR-T cells that target both CD38 and BCMA are designed to bind to both CD38 and BCMA, leading to the destruction of the cancer cells (Tang2022 pages 15-15). Bispecific CD38 antibodies can also bind to another target, such as CD47, to induce phagocytosis of myeloma cells (Donk2018 pages 9-9). Overall, bispecific CD38 antibodies treat myeloma by recruiting T-cells to target and kill myeloma cells (Xiang2020 pages 11-11).",
+    "sources": [
+      {
+        "key": "Chiara2020 pages 14-14",
+        "text": "Chiara Caraccio, Sachi Krishna, D. Phillips, and C. Sch\u00fcrch. Bispecific antibodies for multiple myeloma: a review of targets, drugs, clinical trials, and future directions. Frontiers in Immunology, 2020."
+      },
+      {
+        "key": "Tang2022 pages 15-15",
+        "text": "Y. Tang, Haisen Yin, Xinying Zhao, D. Jin, Yan Liang, Tao Xiong, Lu Li, W. Tang, Jiangzhao Zhang, Min Liu, Zhuojun Yu, Huimin Liu, Sibin Zang, and Zhiping Huang. High efficacy and safety of cd38 and bcma bispecific car-t in relapsed or refractory multiple myeloma. Journal of Experimental & Clinical Cancer Research : CR, 2022."
+      },
+      {
+        "key": "Chiara2020 pages 23-23",
+        "text": "Chiara Caraccio, Sachi Krishna, D. Phillips, and C. Sch\u00fcrch. Bispecific antibodies for multiple myeloma: a review of targets, drugs, clinical trials, and future directions. Frontiers in Immunology, 2020."
+      },
+      {
+        "key": "Donk2018 pages 9-9",
+        "text": "N. V. D. van de Donk and S. Usmani. Cd38 antibodies in multiple myeloma: mechanisms of action and modes of resistance. Frontiers in Immunology, 2018."
+      },
+      {
+        "key": "Xiang2020 pages 11-11",
+        "text": "Xiang Zhou, H. Einsele, and S. Danhof. Bispecific antibodies: a new era of treatment for multiple myeloma. Journal of Clinical Medicine, 2020."
+      }
+    ]
+  },
+  {
+    "question": "What materials and energy are required input to use microorganisms for synthesis of plastics?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "Insufficient information is provided in the sources to answer this question directly. While the sources discuss the use of microorganisms, specifically cyanobacteria, for the synthesis of biodegradable plastics, they do not provide specific information on the materials and energy required for microorganisms to synthesize plastics. However, the sources do mention the potential of using renewable raw materials and atmospheric CO2 as sources of carbon for the production of bioplastics, as well as the use of organic substrates and energy-intensive procedures for fermentation and PHA extraction. Genetic engineering is also mentioned as a technique to improve the production of biopolymers in microorganisms. Further research is needed to determine the specific materials and energy requirements for microorganisms to synthesize plastics.",
+    "sources": [
+      {
+        "key": "Urbanek7669 pages 8-8",
+        "text": "A. Urbanek, W. Rymowicz, and A. Miro\u0144czuk. Degradation of plastics and plastic-degrading bacteria in cold marine habitats. Applied Microbiology and Biotechnology, 102:7669 - 7678, 2018."
+      },
+      {
+        "key": "Preeti2022 pages 4-4",
+        "text": "Preeti Agarwal, R. Soni, Pritam Kaur, Akanksha Madan, Reema Mishra, Jayati Pandey, Shreya Singh, and Garvita Singh. Cyanobacteria as a promising alternative for sustainable environment: synthesis of biofuel and biodegradable plastics. Frontiers in Microbiology, 2022."
+      },
+      {
+        "key": "Preeti2022 pages 2-2",
+        "text": "Preeti Agarwal, R. Soni, Pritam Kaur, Akanksha Madan, Reema Mishra, Jayati Pandey, Shreya Singh, and Garvita Singh. Cyanobacteria as a promising alternative for sustainable environment: synthesis of biofuel and biodegradable plastics. Frontiers in Microbiology, 2022."
+      },
+      {
+        "key": "Preeti2022 pages 14-15",
+        "text": "Preeti Agarwal, R. Soni, Pritam Kaur, Akanksha Madan, Reema Mishra, Jayati Pandey, Shreya Singh, and Garvita Singh. Cyanobacteria as a promising alternative for sustainable environment: synthesis of biofuel and biodegradable plastics. Frontiers in Microbiology, 2022."
+      },
+      {
+        "key": "Preeti2022 pages 23-23",
+        "text": "Preeti Agarwal, R. Soni, Pritam Kaur, Akanksha Madan, Reema Mishra, Jayati Pandey, Shreya Singh, and Garvita Singh. Cyanobacteria as a promising alternative for sustainable environment: synthesis of biofuel and biodegradable plastics. Frontiers in Microbiology, 2022."
+      },
+      {
+        "key": "Preeti2022 pages 21-22",
+        "text": "Preeti Agarwal, R. Soni, Pritam Kaur, Akanksha Madan, Reema Mishra, Jayati Pandey, Shreya Singh, and Garvita Singh. Cyanobacteria as a promising alternative for sustainable environment: synthesis of biofuel and biodegradable plastics. Frontiers in Microbiology, 2022."
+      }
+    ]
+  },
+  {
+    "question": "How can carbon nanotubes be manufactured at scale?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "Carbon nanotubes can be manufactured at scale using the Langmuir-Blodgett (LB) method, which achieves monolayers of aligned non-covalently functionalized single-walled carbon nanotubes (SWNTs) from organic solvent with dense packing. The monolayer SWNTs can be patterned for device integration by microfabrication, enabling the high currents (~3mA) SWNT devices with narrow channel widths. The method is generic for different bulk materials with various diameters (Xiaoling4890 pages 1-1). Another method for producing graphene nanoribbons (GNRs) is by unzipping the side walls of multi-walled carbon nanotubes (MWCNTs) using intercalation with suitable ions. The intertube intercalation of CNTs by different ions has been shown to be an effective method to decrease the van der Waals interactions between individual tubes and assist the exfoliation of bundled CNTs. By selecting appropriate neutral molecules or ions to substitute H2SO4 as an intercalation agent, it shall be a promising approach to produce GNRs with a high yield and further reduce the usage of strong acid during the nanotube unzipping (Yan2016 pages 1-2). Additionally, a green and scalable method for the synthesis of graphene nanoribbons is by intercalation-assisted longitudinal unzipping of multi-walled carbon nanotubes (MWCNTs) with KNO3 and H2SO4, which decreases the strong van der Waals attractions in the MWCNTs bundles and between the coaxial graphene walls of CNTs. The developed methodology possesses the ability to synthesize GNRs effectively with an improved CNT concentration in H2SO4 of 10 mg/ml at 70 \u00b0C, which is amenable to industrial-scale production because of the decreased amount of strong acid (Yan2016 pages 1-1). The LB assembly of densely aligned SWNTs can be combined with chemical separation and selective chemical reaction methods to afford purely metallic or semiconducting SWNTs in massive parallel configuration useful for interconnection or high-speed transistor applications at large scale (Xiaoling4890 pages 2-2).",
+    "sources": [
+      {
+        "key": "Xiaoling4890 pages 1-1",
+        "text": "Xiaoling Li, Li Zhang, Xinran Wang, I. Shimoyama, Xiaoming Sun, W. Seo, and H. Dai. Langmuir-blodgett assembly of densely aligned single-walled carbon nanotubes from bulk materials. Journal of the American Chemical Society, 129 16:4890-1, 2007."
+      },
+      {
+        "key": "Yan2016 pages 1-2",
+        "text": "Yan-sheng Li, Jia-Liang Liao, Shan-Yu Wang, and Wei\u2010Hung Chiang. Intercalation-assisted longitudinal unzipping of carbon nanotubes for green and scalable synthesis of graphene nanoribbons. Scientific Reports, 2016."
+      },
+      {
+        "key": "Yan2016 pages 1-1",
+        "text": "Yan-sheng Li, Jia-Liang Liao, Shan-Yu Wang, and Wei\u2010Hung Chiang. Intercalation-assisted longitudinal unzipping of carbon nanotubes for green and scalable synthesis of graphene nanoribbons. Scientific Reports, 2016."
+      },
+      {
+        "key": "Yan2016 pages 11-11",
+        "text": "Yan-sheng Li, Jia-Liang Liao, Shan-Yu Wang, and Wei\u2010Hung Chiang. Intercalation-assisted longitudinal unzipping of carbon nanotubes for green and scalable synthesis of graphene nanoribbons. Scientific Reports, 2016."
+      },
+      {
+        "key": "Xiaoling4890 pages 2-2",
+        "text": "Xiaoling Li, Li Zhang, Xinran Wang, I. Shimoyama, Xiaoming Sun, W. Seo, and H. Dai. Langmuir-blodgett assembly of densely aligned single-walled carbon nanotubes from bulk materials. Journal of the American Chemical Society, 129 16:4890-1, 2007."
+      }
+    ]
+  },
+  {
+    "question": "What therapeutics are available or being researched for ALS as of 2022?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "As of 2022, only symptomatic treatments are available for ALS, and disease-modifying therapies have been elusive despite over 70 randomized trials of putative new therapeutic agents over the past two decades (Roberts2022 pages 14-15). Pain management, therapeutic exercise, and physiotherapy are recommended to alleviate pain and slow symptomatic progression (Roberts2022 pages 9-10). Riluzole and edaravone are the only two drugs approved by the FDA for ALS treatment, with riluzole being the most widely used, but their efficacy remains controversial (Roberts2022 pages 9-10). Antisense therapeutics targeting synucleinopathy in ALS are being researched as a potential avenue for treatment (Roberts2022 pages 9-10). Two RNA-based therapeutics, jacifusen for FUS and tofersen for SOD1, are being researched for ALS as of 2022, with tofersen currently in a phase III trial showing signs of slowing disease progression in patients with SOD1-ALS (Anja2022 pages 8-8). However, further research is required to provide a clearer understanding of synucleinopathy development in various ALS patient groups, at different stages of the disease process, as well as further investigation of the interactions between Syn and other ALS-associated proteins across the spectrum of neurodegenerative diseases (Roberts2022 pages 14-15). Additionally, various potential therapeutic targets for ALS are being researched, including astrocytes, neuronal cholesterol synthesis, oligodendroglial myelination, NAD+ precursors and antioxidants, SIRT3 activation, and gut microbiome and metabolites (Agrawal2022 pages 27-27).",
+    "sources": [
+      {
+        "key": "Roberts2022 pages 14-15",
+        "text": "B. Roberts, F. Theunissen, F. Mastaglia, P. Akkari, and L. L. Flynn. Synucleinopathy in amyotrophic lateral sclerosis: a potential avenue for antisense therapeutics? International Journal of Molecular Sciences, 2022."
+      },
+      {
+        "key": "Roberts2022 pages 9-10",
+        "text": "B. Roberts, F. Theunissen, F. Mastaglia, P. Akkari, and L. L. Flynn. Synucleinopathy in amyotrophic lateral sclerosis: a potential avenue for antisense therapeutics? International Journal of Molecular Sciences, 2022."
+      },
+      {
+        "key": "Anja2022 pages 1-1",
+        "text": "Anja Holm, Stine N Hansen, H. Klitgaard, and S. Kauppinen. Clinical advances of rna therapeutics for treatment of neurological and neuromuscular diseases. RNA Biology, 19:594 - 608, 2022."
+      },
+      {
+        "key": "Anja2022 pages 8-8",
+        "text": "Anja Holm, Stine N Hansen, H. Klitgaard, and S. Kauppinen. Clinical advances of rna therapeutics for treatment of neurological and neuromuscular diseases. RNA Biology, 19:594 - 608, 2022."
+      },
+      {
+        "key": "Agrawal2022 pages 27-27",
+        "text": "I. Agrawal, Yong Shan Lim, Shi\u2010Yan Ng, and Shuo-Chien Ling. Deciphering lipid dysregulation in als: from mechanisms to translational medicine. Translational Neurodegeneration, 2022."
+      }
+    ]
+  },
+  {
+    "question": "What factors should I consider for selecting a catalyst for a Diels-Alder reaction?",
+    "model": "paperqa-1.2.0",
+    "date": "2023-04-26",
+    "answer": "I cannot answer",
+    "sources": []
   }
 ];

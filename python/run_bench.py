@@ -3,6 +3,7 @@ import json
 import paperqa
 import uuid
 import datetime
+import sys
 
 def sheet_results():
     SPREADSHEET_ID = '1MuQimMdQNXHKmLWVzhaQzFxhTTGDTopUa_325LIt7t8'
@@ -60,6 +61,10 @@ def main():
     json.dump(sheets_output, open('other.json', 'w'), indent=2)
     # unique questions
     questions = list(set([q['question'] for q in sheets_output]))
+    # if there are sys args, filter questions to those with 
+    # the words in them
+    if len(sys.argv) > 1:
+        questions = [q for q in questions if all([w in q.casefold() for w in sys.argv[1:]])]
     with open('paperqa.json', 'w') as f:
         for p in paper_qa(questions):
             json.dump(p, f, indent=2)
