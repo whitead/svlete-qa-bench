@@ -5,6 +5,10 @@ import uuid
 import datetime
 import sys
 
+
+names = ['paperqa', 'bing', 'perplexity', 'scite']
+
+
 def sheet_results():
     SPREADSHEET_ID = '1MuQimMdQNXHKmLWVzhaQzFxhTTGDTopUa_325LIt7t8'
     SHEET_NAME = 'Answers'
@@ -23,10 +27,14 @@ def sheet_results():
             citation_text = f'Citation #{i}'
             if pd.notnull(row[citation_text]):
                 sources.append({"key": str(i), "text": row[citation_text]})
-        
+        name = next((n for n in names if n in model.casefold()), None)
+        if name is None:
+            raise ValueError(f'Unknown model: {model}')
+        if name == 'paperqa':
+            name = f'{name}-{paperqa.__version__}'
         output.append({
             "question": question,
-            "model": model,
+            "model": name,
             "date": date,
             "answer": answer,
             "sources": sources
@@ -34,12 +42,12 @@ def sheet_results():
 
     return output
 
+
 def paper_qa(questions):
 
     output = []
     model = f'paperqa-{paperqa.__version__}'
     date = datetime.datetime.now().strftime("%Y-%m-%d")
-
 
     for q in questions:
         session_id = str(uuid.uuid4())
@@ -56,15 +64,34 @@ def paper_qa(questions):
 
     return output
 
+
+def merge_results(new_results):
+    with open('../src/data.js') as json_file:
+        json_file.readline()
+        old = json.load(json_file)
+    # revise old names to match new names
+    for o in old:
+        if not 'paperqa' in o['model']:
+            name = next((n for n in names if n in o['model'].casefold()), None)
+            if name is None:
+                raise ValueError(f'Unknown model: {o["model"]}')
+            o['model'] = name
+    old.extend(new_results)
+    return old
+
+
 def main():
     sheets_output = sheet_results()
-    json.dump(sheets_output, open('other.json', 'w'), indent=2)
+    merged_results = merge_results(sheets_output)
+    json.dump(merged_results, open('other.json', 'w'), indent=2)
     # unique questions
     questions = list(set([q['question'] for q in sheets_output]))
-    # if there are sys args, filter questions to those with 
+    # if there are sys args, filter questions to those with
     # the words in them
     if len(sys.argv) > 1:
-        questions = [q for q in questions if all([w in q.casefold() for w in sys.argv[1:]])]
+        questions = [q for q in questions if all(
+            [w in q.casefold() for w in sys.argv[1:]])]
+    return
     with open('paperqa.json', 'w') as f:
         for p in paper_qa(questions):
             json.dump(p, f, indent=2)

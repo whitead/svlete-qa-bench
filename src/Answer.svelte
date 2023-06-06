@@ -11,11 +11,9 @@
     function toggleSources() {
         showSources = !showSources;
     }
-
-    
 </script>
 
-<main>
+<section>
     <!-- <p class="question">{question}</p> -->
     <div class="details">
         <table>
@@ -46,13 +44,12 @@
             </div>
         {/if}
     </div>
-</main>
+</section>
 
 <style>
-    main {
+    section {
         background-color: antiquewhite;
         padding: 20px;
-        max-width: 800px;
         flex-basis: fit-content;
         border: 1px solid black;
     }
