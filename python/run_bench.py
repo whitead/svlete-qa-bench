@@ -77,6 +77,15 @@ def merge_results(new_results):
                 raise ValueError(f'Unknown model: {o["model"]}')
             o['model'] = name
     old.extend(new_results)
+    keys = set()
+    to_delete = []
+    for o in old:
+        key = (o['question'], o['model'], o['date'])
+        if key in keys:
+            to_delete.append(o)
+        keys.add(key)
+    for o in to_delete:
+        old.remove(o)
     return old
 
 
