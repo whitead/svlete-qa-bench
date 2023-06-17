@@ -6,7 +6,7 @@ import datetime
 import sys
 
 
-names = ['paperqa', 'bing', 'perplexity', 'scite']
+names = ['paperqa', 'bing', 'perplexity', 'scite', 'chatsonic']
 
 
 def sheet_results():
